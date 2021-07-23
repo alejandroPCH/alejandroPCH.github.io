@@ -3,6 +3,8 @@
 You are on my portfolio, i hope you enjoy it and have some fun with my projects!
 Cheers!
 
+<img src="https://media.giphy.com/media/RH559Fvp6HceyoyIOv/giphy.gif"/>
+
 <!--
 Here are some ideas to get you started:
 
