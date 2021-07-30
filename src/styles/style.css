@@ -1,0 +1,67 @@
+.Header {
+  position: absolute;
+  width: 100vw;
+  padding: 2rem 4rem;
+  color: white;
+}
+
+.Header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.Header__container--list {
+  font-weight: 700;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.hi {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 50%, #24df60 0%, #00fff7 45%, #0707e3 100%), -webkit-gradient(linear, left top, left bottom, from(#00ffab), to(#000000));
+  background: radial-gradient(circle at 50% 50%, #24df60 0%, #00fff7 45%, #0707e3 100%), linear-gradient(180deg, #00ffab 0%, #000000 100%);
+  background-blend-mode: lighten, normal;
+}
+
+.hi__container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hi__container--text {
+  color: white;
+  font-size: 10rem;
+}
+/*# sourceMappingURL=style.css.map */

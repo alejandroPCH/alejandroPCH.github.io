@@ -1,0 +1,18 @@
+.Header{
+    position: absolute;
+    width:100vw;
+    padding:2rem 4rem;
+    color: white;
+    &__container{
+        display: flex;
+        justify-content: flex-end;
+        &--list{
+            font-weight: 700;
+            
+            list-style: none;
+            display: flex;
+            
+            font-size:2rem;
+        }
+    }
+}
