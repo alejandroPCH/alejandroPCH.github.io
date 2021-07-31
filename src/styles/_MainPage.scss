@@ -8,10 +8,16 @@ html{
     overflow-x: hidden;
 }
 .gradient{
-    background: radial-gradient(circle at 50% 50%, #24df60 0%, #00fff7 45%, #0707e3 100%), linear-gradient(180deg, #00ffab 0%, #000000 100%); background-blend-mode: lighten, normal; 
+    background: radial-gradient(circle at 50% 50%, #24df60 0%, #00fff7 45%, #0707e3 100%), linear-gradient(180deg, #00ffab 0%, #000000 100%);
+     background-blend-mode: lighten, normal; 
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: contain;
+    animation: ananimation 5s infinite alternate;
+    
+
 }
+
 .hi{
 
     width:100vw;
@@ -37,3 +43,24 @@ html{
 
 }
 
+    @keyframes ananimation{
+        from { 
+            background-size:100% 100%;
+          
+          }
+          49.9% {
+            background-position:left top;  
+          }
+          50% { 
+            background-size:200% 100%;
+          }
+          50.1% {
+            background-position:bottom top; 
+          }
+          to {
+            background-position:right top;
+            background-size:200% 100%;
+          }
+    }
+
+    

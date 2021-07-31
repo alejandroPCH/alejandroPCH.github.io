@@ -41,6 +41,9 @@ html {
   background-blend-mode: lighten, normal;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: contain;
+  -webkit-animation: ananimation 5s infinite alternate;
+          animation: ananimation 5s infinite alternate;
 }
 
 .hi, .profile {
@@ -69,5 +72,43 @@ html {
 .hi__container--text {
   color: white;
   font-size: 10rem;
+}
+
+@-webkit-keyframes ananimation {
+  from {
+    background-size: 100% 100%;
+  }
+  49.9% {
+    background-position: left top;
+  }
+  50% {
+    background-size: 200% 100%;
+  }
+  50.1% {
+    background-position: bottom top;
+  }
+  to {
+    background-position: right top;
+    background-size: 200% 100%;
+  }
+}
+
+@keyframes ananimation {
+  from {
+    background-size: 100% 100%;
+  }
+  49.9% {
+    background-position: left top;
+  }
+  50% {
+    background-size: 200% 100%;
+  }
+  50.1% {
+    background-position: bottom top;
+  }
+  to {
+    background-position: right top;
+    background-size: 200% 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
