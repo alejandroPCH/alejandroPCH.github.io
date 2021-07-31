@@ -32,14 +32,20 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
-.hi {
-  width: 100vw;
-  height: 100vh;
+.gradient {
   background: radial-gradient(circle at 50% 50%, #24df60 0%, #00fff7 45%, #0707e3 100%), -webkit-gradient(linear, left top, left bottom, from(#00ffab), to(#000000));
   background: radial-gradient(circle at 50% 50%, #24df60 0%, #00fff7 45%, #0707e3 100%), linear-gradient(180deg, #00ffab 0%, #000000 100%);
   background-blend-mode: lighten, normal;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hi, .profile {
+  width: 100vw;
+  height: 100vh;
 }
 
 .hi__container {
