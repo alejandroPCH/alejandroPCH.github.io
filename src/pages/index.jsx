@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
+import Piano from '@/components/Piano'
 
 /* import DynamicImport from '@/components/DynamicImport' */
 
@@ -17,7 +18,8 @@ export default function Home() {
         {/*<link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <main className='bg-white'>
-        <p className='bold text-4xl'>hi</p>
+        <p className='text-black bold text-4xl'>hi</p>
+        <Piano />
       </main>
     </>
   )
