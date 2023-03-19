@@ -1,34 +1,55 @@
-import { useContext, useEffect, useState } from 'react'
-import * as Tone from 'tone'
+import { useEffect, useState, useRef } from "react";
+import PianoInstrument from "@/utils/Piano";
+import { Key } from "./Key";
 
-export default function Piano(){
-  const [synth, setSynth] = useState()
+export default function Piano() {
+  const [piano, setPiano] = useState(new PianoInstrument());
+  const [key_pressed, setKeyPressed] = useState("");
+  const [key_released, setKeyReleased] = useState("");
+
+  useEffect(() => {
+    piano.make();
+  }, []);
+
+  useEffect(() => {
+    if (!piano.synth) return;
+
+    document.addEventListener("keydown", async (e) => await handleKeyDown(e));
+    document.addEventListener("keyup", async (e) => await handleKeyUp(e));
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("keyup", handleKeyUp);
+    };
+  }, []);
   
-  useEffect(()=>{
-    async() => await Tone.start()
-    
-    setSynth(new Tone.PolySynth(Tone.Synth).toDestination())
+  async function handleKeyDown(e) {
+    piano.getKey(e.code).then(async (key) => {
+      setKeyPressed(key);
+      setKeyReleased(false);
+      await piano.playNote(key);
+    });
+  }
 
-  },[])
-  async function playNote(note){
-    await Tone.start()
-    const now = Tone.now()
+  async function handleKeyUp(e) {
+    piano.getKey(e.code).then(async (key) => {
+      setKeyPressed(key);
+      setKeyReleased(key);
+      await piano.releaseNote(key);
+    });
+  }
 
-    synth.triggerAttack("D4", now);
-    synth.triggerAttack("F4", now + 0.5);
-    synth.triggerAttack("A4", now + 1);
-    synth.triggerAttack("C5", now + 1.5);
-    synth.triggerAttack("E5", now + 2);
-    synth.triggerRelease(["D4", "F4", "A4", "C5",'E5'], now+2);
-
-    }
-
-  return(
-    <div className='w-full flex justify-between'>
-      <button style={{color:"black"}} onClick={async() => await playNote('C4')}>C4</button>
-      <button style={{color:"black"}} onClick={async() => await playNote('D4')}>D4</button>
-      <button style={{color:"black"}} onClick={async() => await playNote('E4')}>E4</button>
+  return (
+    <div className="w-full flex justify-center items-center h-96 relative">
+      {piano.keys.map((key, index) => (
+        <Key
+          key={key.event_code}
+          index={index}
+          props={key}
+          key_pressed={key_pressed}
+          key_released={key_released}
+        />
+      ))}
     </div>
-
-  )
+  );
 }
