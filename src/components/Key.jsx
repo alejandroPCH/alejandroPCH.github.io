@@ -19,5 +19,5 @@ export function Key({ index, props: key, key_pressed, key_released }) {
         {key.is_pressed ? "opacity-50" : "opacity-0"}
       </p>
     </div>
-  );
+  )
 }

@@ -1,42 +1,42 @@
-import { useEffect, useState, useRef } from "react";
-import PianoInstrument from "@/utils/Piano";
-import { Key } from "./Key";
+import { useEffect, useState, useRef } from "react"
+import PianoInstrument from "@/utils/Piano"
+import { Key } from "./Key"
 
 export default function Piano() {
-  const [piano, setPiano] = useState(new PianoInstrument());
-  const [key_pressed, setKeyPressed] = useState("");
-  const [key_released, setKeyReleased] = useState("");
+  const [piano, setPiano] = useState(new PianoInstrument())
+  const [key_pressed, setKeyPressed] = useState("")
+  const [key_released, setKeyReleased] = useState("")
 
   useEffect(() => {
-    piano.make();
-  }, []);
+    piano.make()
+  }, [])
 
   useEffect(() => {
-    if (!piano.synth) return;
+    if (!piano.synth) return
 
-    document.addEventListener("keydown", async (e) => await handleKeyDown(e));
-    document.addEventListener("keyup", async (e) => await handleKeyUp(e));
+    document.addEventListener("keydown", async (e) => await handleKeyDown(e))
+    document.addEventListener("keyup", async (e) => await handleKeyUp(e))
 
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-      document.removeEventListener("keyup", handleKeyUp);
-    };
-  }, []);
-  
+      document.removeEventListener("keydown", handleKeyDown)
+      document.removeEventListener("keyup", handleKeyUp)
+    }
+  }, [])
+
   async function handleKeyDown(e) {
     piano.getKey(e.code).then(async (key) => {
-      setKeyPressed(key);
-      setKeyReleased(false);
-      await piano.playNote(key);
-    });
+      setKeyPressed(key)
+      setKeyReleased(false)
+      await piano.playNote(key)
+    })
   }
 
   async function handleKeyUp(e) {
     piano.getKey(e.code).then(async (key) => {
-      setKeyPressed(key);
-      setKeyReleased(key);
-      await piano.releaseNote(key);
-    });
+      setKeyPressed(key)
+      setKeyReleased(key)
+      await piano.releaseNote(key)
+    })
   }
 
   return (
@@ -51,5 +51,5 @@ export default function Piano() {
         />
       ))}
     </div>
-  );
+  )
 }

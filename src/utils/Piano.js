@@ -1,8 +1,8 @@
-import * as Tone from "tone";
+import * as Tone from "tone"
 
 export default class Piano {
-  keys = [];
-  synth = {};
+  keys = []
+  synth = {}
 
   constructor() {
     this.keys = [
@@ -15,15 +15,15 @@ export default class Piano {
       new Key("KeyJ", "B4"),
       new Key("KeyK", "C5"),
       new Key("KeyL", "D5"),
-    ];
+    ]
   }
 
   get synth() {
-    return this.synth;
+    return this.synth
   }
 
   make() {
-    async () => await Tone.start();
+    ;async () => await Tone.start()
 
     this.synth = new Tone.Sampler({
       urls: {
@@ -37,63 +37,70 @@ export default class Piano {
       release: 10,
 
       onload: () => {
-        synth.triggerAttackRelease(["C1", "E1", "G1", "B1"], 0.5);
+        synth.triggerAttackRelease(["C1", "E1", "G1", "B1"], 0.5)
       },
-    }).toDestination();
+    }).toDestination()
   }
 
   async getKey(event_code) {
     return new Promise((resolve, reject) => {
       this.keys.map((key) => {
         if (event_code == key.event_code) {
-          resolve(key);
+          resolve(key)
         }
-      });
-    });
+      })
+    })
   }
   async playNote(key) {
-    if (key.is_pressed == true) return;
-    key.pressed = true;
-    await Tone.start();
+    if (key.is_pressed == true) return
+    // el e.code está trayendo otra tecla al forzar el error
+    // https://codepen.io/jend-codes/pen/PoNbGGX
+    key.pressed = true
+
+    await Tone.start()
+    // se está apretando una tecla cuando estoy apretando otra
+    // y es porque estoy cargando una tecla previa
+    // debo resetear las teclas
+    /* const now = Tone.now() */
 
     return Tone.loaded().then(() => {
-      this.synth.triggerAttack(key.note);
-    });
+      this.synth.triggerAttack(key.note)
+    })
   }
 
   async releaseNote(key) {
-    key.pressed = false;
-    await Tone.start();
+    key.pressed = false
+    await Tone.start()
 
     return Tone.loaded().then(() => {
-      this.synth.triggerRelease(key.note);
-    });
+      this.synth.triggerRelease(key.note)
+    })
   }
 }
 
 class Key {
-  event_code = "";
-  note = "";
-  pressed = false;
+  event_code = ""
+  note = ""
+  pressed = false
 
   constructor(event_code, note) {
-    this.event_code = event_code;
-    this.note = note;
+    this.event_code = event_code
+    this.note = note
   }
 
   get event_code() {
-    return this.event_code;
+    return this.event_code
   }
 
   get is_pressed() {
-    return this.pressed;
+    return this.pressed
   }
 
   get note() {
-    return this.note;
+    return this.note
   }
 
   set pressed(pressed) {
-    this.pressed = pressed;
+    this.pressed = pressed
   }
 }

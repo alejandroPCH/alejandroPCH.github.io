@@ -1,5 +1,5 @@
-import Head from "next/head";
-import Piano from "@/components/Piano";
+import Head from "next/head"
+import Piano from "@/components/Piano"
 
 export default function Home() {
   return (
@@ -14,5 +14,5 @@ export default function Home() {
         <Piano />
       </main>
     </>
-  );
+  )
 }
