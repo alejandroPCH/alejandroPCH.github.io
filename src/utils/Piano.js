@@ -7,13 +7,19 @@ export default class Piano {
   constructor() {
     this.keys = [
       new Key("KeyA", "C4"),
+      new Key("KeyW", "C#4", true),
       new Key("KeyS", "D4"),
+      new Key("KeyE", "D#4", true),
       new Key("KeyD", "E4"),
       new Key("KeyF", "F4"),
+      new Key("KeyT", "F#4", true),
       new Key("KeyG", "G4"),
+      new Key("KeyY", "G#4", true),
       new Key("KeyH", "A4"),
+      new Key("KeyU", "A#4", true),
       new Key("KeyJ", "B4"),
       new Key("KeyK", "C5"),
+      new Key("KeyO", "C#5w", true),
       new Key("KeyL", "D5"),
     ]
   }
@@ -53,16 +59,10 @@ export default class Piano {
   }
   async playNote(key) {
     if (key.is_pressed == true) return
-    // el e.code está trayendo otra tecla al forzar el error
-    // https://codepen.io/jend-codes/pen/PoNbGGX
+
     key.pressed = true
-
     await Tone.start()
-    // se está apretando una tecla cuando estoy apretando otra
-    // y es porque estoy cargando una tecla previa
-    // debo resetear las teclas
-    /* const now = Tone.now() */
-
+  
     return Tone.loaded().then(() => {
       this.synth.triggerAttack(key.note)
     })
@@ -82,14 +82,19 @@ class Key {
   event_code = ""
   note = ""
   pressed = false
+  accidental = false
 
-  constructor(event_code, note) {
+  constructor(event_code, note, accidental =false) {
     this.event_code = event_code
     this.note = note
+    this.accidental = accidental
   }
 
   get event_code() {
     return this.event_code
+  }
+  get accidental(){
+    return this.accidental
   }
 
   get is_pressed() {
