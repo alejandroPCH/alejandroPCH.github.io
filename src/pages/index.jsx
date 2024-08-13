@@ -1,7 +1,9 @@
 import Head from "next/head"
 import Piano from "@/components/Piano"
+import Hero from "@/components/Hero"
 
-export default function Home() {
+export default function Home({role}) {
+
   return (
     <>
       <Head>
@@ -9,9 +11,9 @@ export default function Home() {
         <meta name="description" content="Alejandro's web page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main className="bg-white">
-        <p className="text-black bold text-4xl">hi</p>
+      <main>
         <Piano />
+        <Hero />
       </main>
     </>
   )
