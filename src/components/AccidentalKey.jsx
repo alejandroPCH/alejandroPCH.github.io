@@ -14,9 +14,6 @@ export function AccidentalKey({props, className}) {
         : "opacity-0"
     } h-full w-full`}
   ></button>
-  <p className="absolute inset-0 text-black flex items-center justify-center w-full text-white">
-    {/* {key.is_pressed ? "opacity-50" : "opacity-0"} */}
-  </p>
 </div>
   )
 }
