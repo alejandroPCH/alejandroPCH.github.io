@@ -2,7 +2,7 @@ import * as Tone from "tone"
 
 export default class Piano {
   keys = []
-  synth = {}
+  _synth = {}
 
   constructor() {
     this.keys = [
@@ -25,9 +25,11 @@ export default class Piano {
   }
 
   get synth() {
-    return this.synth
+    return this._synth
   }
-
+  set synth(synth){
+    this._synth = synth
+  }
   make() {
     ;async () => await Tone.start()
 
@@ -79,33 +81,42 @@ export default class Piano {
 }
 
 class Key {
-  event_code = ""
-  note = ""
-  pressed = false
+  _event_code = ""
+  _note = ""
+  _pressed = false
   accidental = false
 
   constructor(event_code, note, accidental =false) {
     this.event_code = event_code
-    this.note = note
+    this._note = note
     this.accidental = accidental
   }
 
   get event_code() {
-    return this.event_code
+    return this._event_code
   }
   get accidental(){
-    return this.accidental
+    return this._accidental
   }
 
   get is_pressed() {
-    return this.pressed
+    return this._pressed
   }
 
   get note() {
-    return this.note
+    return this._note
   }
 
   set pressed(pressed) {
-    this.pressed = pressed
+    this._pressed = pressed
+  }
+  set event_code(event_code){
+    this._event_code = event_code
+  }
+  set note(note){
+    this._note = note
+  }
+  set accidental(accidental){
+    this._accidental = accidental
   }
 }
