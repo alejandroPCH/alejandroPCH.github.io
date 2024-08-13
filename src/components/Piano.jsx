@@ -58,14 +58,15 @@ export default function Piano() {
         </div>
         <div className="flex flex-row row-start-1 row-1 col-start-1 ml-[3.4rem]">
         {piano.keys.map((key) => {
-            let extra_spacing = (key.note.includes("D#") || key.note.includes("A#")) && "mr-[7rem]"  // if D# or A# key
+            
+            let extra_spacing = (key.note.includes("D#") || key.note.includes("A#")) ? "mr-[7rem]" : "mr-[1rem]"// if D# or A# key
 
             return (
               key.accidental &&
                 <AccidentalKey 
                   key={key.event_code}
                   props={[key, key_pressed, key_released]}
-                  className={"mr-[1rem] "+ extra_spacing}
+                  className={extra_spacing}
                 />
             )
           })
