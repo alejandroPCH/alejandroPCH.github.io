@@ -82,7 +82,7 @@ export default function HeroContainer() {
       </div>
 
       <div className="flex w-full h-full my-auto justify-center items-center  overflow-y-hidden">
-        <motion.div className="w-full z-0 text-stone-100 space-y-12 lg:space-y-5  lg:ml-32  flex justify-center flex-col lg:items-start items-center z-30" style={{y:yScroll}}>
+        <motion.div className="w-full z-20 text-stone-100 space-y-12 lg:space-y-5  lg:ml-32  flex justify-center flex-col lg:items-start items-center" style={{y:yScroll}}>
           <h2 className="font-bold  text-2xl sm:text-4xl lg:text-5xl" ref={hi}></h2>
           <h2 className="font-semibold text-3xl sm:text-6xl lg:text-7xl" ref={name}>
             I'm Alejandro.
