@@ -1,31 +1,12 @@
-import { useRef, useState } from "react"
+import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import Form from "@/components/Contact/Form"
 
-const variants = {
-  initial: {
-    y: 500,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.1,
-    },
-  },
-}
-
 export default function ContactContainer() {
   const contactContainer = useRef(null)
-  const formRef = useRef(null)
-  const [error, setError] = useState(false)
-  const [success, setSuccess] = useState(false)
+  
 
   const isInView = useInView(contactContainer, { margin: "-300px", once: true })
-
-  const fromLeftToRight = {}
 
   return (
     <div className="h-screen" ref={contactContainer} id="contact">
@@ -33,7 +14,6 @@ export default function ContactContainer() {
         <div className="self-end lg:self-center">
           <motion.h2
             className="font-bold text-5xl sm:text-7xl md:text-9xl text-center"
-            variants={fromLeftToRight}
             initial={{ x: "-50%", opacity: 0 }}
             transition={{ duration: 1 }}
             animate={isInView && { x: 0, opacity: 1 }}
@@ -50,7 +30,7 @@ export default function ContactContainer() {
           </motion.p>
         </div>
         <div className="relative w-full px-4  flex justify-center">
-          <motion.div /* left-[15%] md:lg- */
+          <motion.div 
             className="w-full z-90 inset-0 flex items-center justify-center stroke-violet-500  text-center  stroke-orange-300 absolute z-[-1]"
             initial={{ opacity: 1 }}
             animate={{ opacity: 0 }}
