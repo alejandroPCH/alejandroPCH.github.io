@@ -43,8 +43,7 @@ export default function PianoContainer() {
 
     !cancelKey &&
       piano.getKey(e.code).then(async (key) => {
-        console.log(counter.get())
-
+        
         setKeyPressed(key)
         setKeyReleased(false)
         await piano.playNote(key)
