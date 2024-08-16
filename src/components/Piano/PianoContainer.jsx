@@ -111,7 +111,7 @@ export default function PianoContainer() {
         </div>
       </div>
       <div>
-        <h1 className="block lg:hidden font-bold text-6xl sm:text-8xl lg:text-9xl">
+        <h1 className="block lg:hidden mx-4 font-bold text-4xl sm:text-5xl md:text-8xl  text-center">
           Piano Available <br /> On Desktop!
         </h1>
       </div>
