@@ -17,12 +17,13 @@ export default function Form() {
       [e.target.name]: e.target.value,
     })
   }
+  
   const sendEmail = (e) => {
     e.preventDefault()
 
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_EMAILID,
+        process.env.NEXT_PUBLIC_EMAILJS_EMAIL_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         form.current,
         {
@@ -34,6 +35,8 @@ export default function Form() {
           setResponse("Message sent!")
         },
         (error) => {
+          console.error(error);
+          
           setResponse(
             "Uhm... something failed. You can send me a message to this email: alejandropachas1@gmail.com"
           )
@@ -41,15 +44,16 @@ export default function Form() {
       )
   }
   function isDisable() {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
     return formValues.name.length > 0 &&
-      (formValues.email.length > 0 && emailRegex.test(formValues.email)) &&
+      formValues.email.length > 0 &&
+      emailRegex.test(formValues.email) &&
       formValues.message.length > 0
       ? false
       : true
   }
-  
+
   return (
     <motion.form
       ref={form}
