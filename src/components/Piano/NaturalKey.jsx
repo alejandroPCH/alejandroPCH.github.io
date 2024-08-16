@@ -1,18 +1,19 @@
 export function NaturalKey({props}) {
-  const [key, key_pressed, key_released, index] = props
+  const [key, keyPressed, keyReleased, index] = props
   return (
     <div
-      className={`row-span-2 w-24 border border-black rounded-md border-white ${
+      className={`row-span-2 lg:w-28 xl:w-36 2xl:w-44 border border-black rounded-md border-white ${
         index == 0 ? "border" : "border-l-0 border-r-1"
       }`}
       key={key.event_code}
     >
       <button
+        data= {`${(index*10) %3} ${(index*10) %4} ${(index*10) %7}`}
         className={`shadow-inset bg-white overflow-hidden transition-all duration-100 ease-out ${
-          (key_released.note != key_pressed.note &&
-            key_pressed.note == key.note) ||
+          (keyReleased.note != keyPressed.note &&
+            keyPressed.note == key.note) ||
           key.is_pressed
-            ? "opacity-50"
+            ? "opacity-20"
             : "opacity-0"
         } h-full w-full`}
       ></button>
