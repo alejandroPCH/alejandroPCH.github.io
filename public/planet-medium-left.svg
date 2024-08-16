@@ -1,0 +1,180 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 594 593" width="514" height="513">
+	<title>planet-medium-left-svg</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m3701.96 1971.08h-4515v-2100h4515z"/>
+		</clipPath>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(717.625,348.507,-349.262,719.179,120.168,-234.603)">
+			<stop offset="0" stop-color="#4300db"/>
+			<stop offset=".984" stop-color="#76ffff"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) } 
+		.s1 { fill: #ffffff } 
+		.s2 { fill: #76ffff } 
+		.s3 { fill: #aff1ff } 
+	</style>
+	<g id="_Artboards_">
+	</g>
+	<g id="Layer 1">
+		<g id="Clip-Path: Clip-Path: Clip-Path: Clip-Path: Clip-Path: Clip-Path: &lt;Clip Group&gt;" clip-path="url(#cp1)">
+			<g id="Clip-Path: Clip-Path: Clip-Path: Clip-Path: Clip-Path: &lt;Clip Group&gt;">
+				<g id="Clip-Path: Clip-Path: Clip-Path: Clip-Path: &lt;Clip Group&gt;">
+					<g id="Clip-Path: Clip-Path: Clip-Path: &lt;Clip Group&gt;">
+						<g id="Clip-Path: Clip-Path: &lt;Clip Group&gt;">
+							<g id="Clip-Path: &lt;Clip Group&gt;">
+								<g id="&lt;Clip Group&gt;">
+									<g id="&lt;Group&gt;">
+										<g id="non-perfect-planet">
+											<g id="planet">
+												<path id="&lt;Path&gt;" class="s0" d="m473.6 533.5c-3.4 2.5-6.9 5-10.4 7.4-87 59.3-195.2 66.4-285.7 26.9-4.3-1.9-8.6-3.8-12.8-6-40.4-19.9-76.8-49.4-105.6-88-33.9-45.5-52.7-97.5-57.3-150.3-0.5-6.9-0.9-13.8-1-20.6-0.6-34.8 4.9-69.5 16.4-102.4 1.8-5.4 3.9-10.8 6-16.1 19.8-48 52.6-91.5 97.3-124.8 21.9-16.3 45.2-29.2 69.5-38.7 3.5-1.3 7.2-2.7 10.8-3.9 118.8-41.3 255.3-3.6 334.1 102.3 39.2 52.5 58.2 113.9 58.4 174.8 0 7.8-0.2 15.6-0.8 23.3-2.8 37-12.5 73.4-28.8 107.2-5.3 10.9-11.2 21.5-17.9 31.8-12.1 18.7-26.4 36.2-42.9 52.2-9.1 8.8-18.9 17.1-29.3 24.9z"/>
+												<g id="&lt;Group&gt;" style="opacity: .5">
+												</g>
+												<path id="&lt;Path&gt;" class="s1" d="m522.2 214.5c-1.5 21.5-16 38.1-32.3 37-16.4-1-28.5-19.3-27-40.8 1.5-21.6 15.9-38.2 32.3-37.1 16.4 1 28.4 19.3 27 40.9z"/>
+												<path id="&lt;Path&gt;" class="s1" d="m541.1 302.3c-1 14.1-10.5 25.1-21.3 24.4-10.7-0.7-18.7-12.8-17.7-26.9 1-14.2 10.5-25.1 21.2-24.4 10.8 0.7 18.8 12.7 17.8 26.9z"/>
+												<g id="&lt;Group&gt;" style="opacity: .3">
+													<path id="&lt;Path&gt;" class="s2" d="m542.8 464.4c-41.9-40.5-80.1-86.1-127.9-121.5-61.4-45.5-129.3-82.6-202.2-106.4-63.5-20.7-131.5-30.5-198.5-28 1.8-5.4 3.9-10.8 6-16.1 5.1-0.6 10.2-1.2 15.2-1.8 57.5-6.7 116.1-13.3 172.7-1.5 65.5 13.7 123 51.1 178.8 87.7 55.3 36.3 137.4 89.1 173.8 155.8-5.3 10.9-11.2 21.5-17.9 31.8z"/>
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .3">
+													<path id="&lt;Path&gt;" class="s2" d="m474.6 532.5c-3.4 2.5-6.9 5-10.4 7.4-23.3-48.3-61.9-88.4-112.8-103.5-24.3-7.1-49.9-8.3-75.3-9.4-9.5-0.4-19.6-0.8-28.3 3.5-17.2 8.4-21.4 30.3-26.1 48.8-8.2 31.8-23.6 61.1-43.2 87.5-4.3-1.9-8.6-3.8-12.8-6 14.3-16.5 26.4-34.5 34.7-54.7 17.5-42.4 13.9-96.2-19.4-127.4-17.8-16.8-41.6-25.2-64.6-33.2-36.6-12.7-75.7-25.4-113.6-23-0.5-6.9-0.9-13.8-1-20.6 25.3-5.7 51.3-6 76.3 1.1 63.1 18.1 107.1 78.2 170 97 31 9.4 64.3 7.8 96.4 12.5 54.9 8.2 106.2 36.7 143.6 77.5 3.8 4.3 9.7 10.5 15.8 17.6-9.1 8.8-18.9 17.1-29.3 24.9z"/>
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .3">
+													<path id="&lt;Path&gt;" class="s2" d="m206.7 69.9c-3.3-5.1-6.5-10.2-9.7-15.2-4-6.5-12-16.3-19-26.8 3.5-1.3 7.2-2.7 10.8-3.9 5.5 15.5 9.7 32.2 17.9 45.9z"/>
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .3">
+													<path id="&lt;Path&gt;" class="s2" d="m580.5 324.4c-56.9-99.6-157.7-174.1-270.8-196-22.1-4.3-45.4-6.9-64.7-18.5-13.9-8.3-24.6-20.5-34.1-33.8 0.9 1.2 2 2.3 3 3.5 16.6 18.3 42.1 25.9 66.8 28.9 24.6 2.9 49.8 1.9 74.1 6.8 55.6 11.3 100 51.5 141.5 90.2 30.8 28.7 62.9 60.2 85 95.6 0 7.8-0.2 15.6-0.8 23.3z"/>
+												</g>
+											</g>
+										</g>
+										<g id="mini-star">
+											<g id="&lt;Group&gt;" style="opacity: .8">
+											</g>
+											<g id="&lt;Group&gt;">
+											</g>
+										</g>
+										<g id="generic-sta">
+											<g id="&lt;Group&gt;" style="opacity: .5">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .5">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .5">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .9">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .2">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .2">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .2">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .2">
+											</g>
+											<g id="&lt;Group&gt;">
+												<g id="&lt;Group&gt;" style="opacity: .5">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .2">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .2">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .2">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .5">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .2">
+												</g>
+											</g>
+										</g>
+										<g id="&lt;Group&gt;">
+											<g id="&lt;Group&gt;" style="opacity: .5">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .9">
+											</g>
+											<g id="&lt;Group&gt;">
+												<g id="&lt;Group&gt;" style="opacity: .5">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .9">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .3">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .3">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .3">
+												</g>
+											</g>
+										</g>
+										<g id="&lt;Group&gt;">
+											<g id="&lt;Group&gt;" style="opacity: .5">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .5">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .5">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .9">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .2">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .2">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .2">
+											</g>
+											<g id="&lt;Group&gt;" style="opacity: .2">
+												<path id="&lt;Path&gt; copy" class="s3" d="m435.6 422.8c0.8-2.8 3.8-4.3 6.6-3.5 2.8 0.9 4.3 3.9 3.5 6.7-0.9 2.8-3.8 4.3-6.6 3.5-2.8-0.9-4.4-3.9-3.5-6.7z"/>
+											</g>
+											<g id="&lt;Group&gt;">
+												<g id="&lt;Group&gt;" style="opacity: .5">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .2">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .2">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .2">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .5">
+												</g>
+												<g id="&lt;Group&gt;" style="opacity: .2">
+												</g>
+											</g>
+										</g>
+										<g id="big-planet" style="opacity: .9">
+											<g id="&lt;Group&gt;">
+												<g id="&lt;Group&gt;">
+													<g id="&lt;Group&gt;" style="opacity: .2">
+													</g>
+													<g id="&lt;Group&gt;" style="opacity: .2">
+													</g>
+												</g>
+											</g>
+										</g>
+										<g id="&lt;Group&gt;">
+											<g id="&lt;Group&gt;">
+											</g>
+											<g id="&lt;Group&gt;">
+											</g>
+										</g>
+										<g id="&lt;Group&gt;">
+											<g id="&lt;Group&gt;">
+											</g>
+											<g id="&lt;Group&gt;">
+											</g>
+											<g id="&lt;Group&gt;">
+											</g>
+										</g>
+										<g id="&lt;Group&gt;">
+											<g id="&lt;Group&gt;">
+											</g>
+										</g>
+										<g id="&lt;Group&gt;">
+										</g>
+										<g id="&lt;Group&gt;">
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
