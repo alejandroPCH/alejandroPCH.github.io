@@ -22,7 +22,7 @@ export default function () {
     },
   }
   return (
-    <div className="h-screen relative" ref={aboutMeContainer} id="about-me">
+    <div className="h-screen relative overflow-hidden" ref={aboutMeContainer} id="about-me" >
       <div className="grid grid-cols-1 lg:grid-cols-2 items-end lg:items-center justify-items-center h-full ">
         <Rocket isInView={isInView}/>
 
@@ -45,7 +45,7 @@ export default function () {
           </p>
         </motion.div>
 
-        <div className="p-0 md:p-12 z-50">
+        <div className="p-0 md:p-12">
           <motion.img
             src="/alejandro-photo.jpeg"
             animate={isInView && { scale: 1, opacity: 1 }}
@@ -53,7 +53,7 @@ export default function () {
             transition={{ duration: 1, delay: 0.5 }}
             drag
             whileDrag={{ cursor: "grabbing" }}
-            className="w-3/4 min-w-72 rounded-lg mx-auto  cursor-grab"
+            className="w-3/4 min-w-72 rounded-lg mx-auto  cursor-grab z-50"
           />
         </div>
       </div>
