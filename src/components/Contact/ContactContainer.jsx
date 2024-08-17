@@ -4,9 +4,11 @@ import Form from "@/components/Contact/Form"
 
 export default function ContactContainer() {
   const contactContainer = useRef(null)
-  
 
-  const isInView = useInView(contactContainer, { margin: "-300px", once: true })
+  const isInView = useInView(contactContainer, {
+    margin: "0px 0px -310px 0px",
+    once: true,
+  })
 
   return (
     <div className="h-screen" ref={contactContainer} id="contact">
@@ -18,22 +20,31 @@ export default function ContactContainer() {
             transition={{ duration: 1 }}
             animate={isInView && { x: 0, opacity: 1 }}
           >
-            Let's Talk!{" "}
+            Let's Talk!
           </motion.h2>
           <motion.p
-            className="text-md md:text-xl xl:text-2xl text-center mx-4"
+            className="text-md md:text-xl xl:text-2xl text-center mx-4 my-4"
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={isInView && { opacity: 1, y: 0 }}
             transition={{ delay: 3, duration: 1 }}
           >
             Whether you want to work with me or just say hi, send me an email!
           </motion.p>
+          <motion.div
+            className="w-full flex justify-evenly my-12"
+            initial={{ opacity: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+            animate={isInView && { opacity: 1 }}
+          >
+            <a target="_blank" href="https://www.linkedin.com/in/alejandropch/" ><img src="/linkedin.svg" className="w-10" /></a>
+            <a target="_blank" href="https://github.com/alejandropch" ><img src="/github.svg" className="w-10" /></a>
+          </motion.div>
         </div>
         <div className="relative w-full px-4  flex justify-center">
-          <motion.div 
-            className="w-full z-90 inset-0 flex items-center justify-center stroke-violet-500  text-center  stroke-orange-300 absolute z-[-1]"
+          <motion.div
+            className="w-full z-90 inset-0 flex items-center justify-center text-center stroke-orange-300 absolute z-[-1]"
             initial={{ opacity: 1 }}
-            animate={{ opacity: 0 }}
+            animate={isInView && { opacity: 0 }}
             transition={{ delay: 3, duration: 1 }}
           >
             <svg
@@ -41,11 +52,11 @@ export default function ContactContainer() {
               viewBox="0 0 32.666 32.666"
             >
               <motion.path
-                strokeWidth={0.2}
+                strokeWidth={0.5}
                 fill="none"
                 initial={{ pathLength: 0 }}
                 animate={isInView && { pathLength: 1 }}
-                transition={{ duration: 3 }}
+                transition={{ duration: 5 }}
                 d="M28.189,16.504h-1.666c0-5.437-4.422-9.858-9.856-9.858l-0.001-1.664C23.021,4.979,28.189,10.149,28.189,16.504z
             M16.666,7.856L16.665,9.52c3.853,0,6.983,3.133,6.981,6.983l1.666-0.001C25.312,11.735,21.436,7.856,16.666,7.856z M16.333,0
             C7.326,0,0,7.326,0,16.334c0,9.006,7.326,16.332,16.333,16.332c0.557,0,1.007-0.45,1.007-1.006c0-0.559-0.45-1.01-1.007-1.01
@@ -62,7 +73,7 @@ export default function ContactContainer() {
               />
             </svg>
           </motion.div>
-          <Form />
+          <Form isInView={isInView} />
         </div>
       </div>
     </div>
