@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react"
 import { color, motion } from "framer-motion"
 import emailjs from "@emailjs/browser"
 
-export default function Form() {
+export default function Form({isInView}) {
   const [response, setResponse] = useState(false)
   const form = useRef(null)
   const [formValues, setFormValues] = useState({
@@ -59,7 +59,7 @@ export default function Form() {
       ref={form}
       onSubmit={sendEmail}
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={isInView && { opacity: 1 }}
       transition={{ delay: 4, duration: 1 }}
       className="flex flex-col space-y-4 w-full md:w-3/4"
     >
