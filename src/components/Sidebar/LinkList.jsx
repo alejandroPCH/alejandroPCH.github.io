@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 
 export default function LinkList() {
-  const items = ["Play Piano", "Home", "Contact"]
+  const items = ["Play Piano", "Home", "About Me","Contact"]
   const listVariants = {
     open: {
       transition: {
