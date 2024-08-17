@@ -14,6 +14,7 @@ export default function Home({role}) {
     <>
       <Head>
         <title>Alejandro Pachas</title>
+        <link rel="icon" href="/web-logo.svg"/>
         <meta name="description" content="Alejandro's web page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
