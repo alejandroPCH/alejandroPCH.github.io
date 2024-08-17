@@ -93,7 +93,7 @@ export default function Form({isInView}) {
         className="p-5 disabled:bg-slate-500 transition duration-300 active:bg-violet-700 bg-violet-500 text-white"
         disabled={isDisable() ? true : false}
       >
-        Submit
+        Send Email
       </button>
       <p className="">{response}</p>
     </motion.form>
