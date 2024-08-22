@@ -27,7 +27,6 @@ export default function SidebarContainer() {
 
   useEffect(() => {
     function handleClickOutside(event) {
-      
       if (sidebar.current.contains(event.target) == false) { // click outside of sidebar
         setOpen(false)
       }
@@ -41,21 +40,21 @@ export default function SidebarContainer() {
   return (
     <>
       <motion.div
-        className="flex flex-col items-center justify-center fixed  z-50 lg:z-40 cursor-pointer"
+        className={`flex flex-col items-center justify-center fixed  z-50 lg:z-40 
+          ${open ? "cursor-default" : "cursor-pointer"}
+          `}
         animate={open ? "open" : "closed"}
         ref={sidebar}
       >
         <motion.div
-         className="bg-white text-black fixed w-full sm:w-[25rem] top-0 left-0 h-full flex flex-col items-center justify-center "
-         variants={variants}
-         onClick={() => setOpen((prev) => !prev)}
+          className="bg-white text-black fixed w-full sm:w-[25rem] top-0 left-0 h-full flex flex-col items-center justify-center"
+          variants={variants}
+          onClick={() => setOpen((prev) => !prev)}
         >
           <ToggleButton setOpen={setOpen} />
           <LinkList />
         </motion.div>
-        
       </motion.div>
-
     </>
   )
 }

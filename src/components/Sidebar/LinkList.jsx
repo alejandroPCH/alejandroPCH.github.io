@@ -28,7 +28,7 @@ export default function LinkList() {
   }
   return (
     <motion.div
-      className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center gap-20"
+      className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center gap-10"
       variants={listVariants}
     >
       {items.map((item) => {
@@ -38,7 +38,7 @@ export default function LinkList() {
           <motion.a
             href={"#" + id}
             key={id}
-            className="text-4xl z-50"
+            className="text-4xl z-50 w-full text-center py-4"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             variants={itemVariants}
