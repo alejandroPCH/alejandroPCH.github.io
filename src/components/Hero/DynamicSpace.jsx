@@ -25,14 +25,14 @@ export default function Planets({yScroll}) {
         src={"/planet-medium-left.svg"}
         drag
         whileDrag={{ cursor: "grabbing" }}
-        className="w-[15.5rem] hidden lg:block h-auto absolute inset-[28%] top-[3.2rem]  bg-top z-40 cursor-grab"
+        className="w-[15.5rem] hidden 2xl:block h-auto absolute inset-[28%] top-[3.2rem]  bg-top z-40 cursor-grab"
         alt=""
       />
       <motion.img
         src={"/planet-large-right.svg"}
         drag
         whileDrag={{ cursor: "grabbing" }}
-        className="w-[30rem] h-auto absolute inset-[76%] top-[2rem] z-40 cursor-grab"
+        className="w-[15rem] lg:w-[20rem] xl:w-[30rem] h-auto absolute inset-[82%] xl:inset-[76%] top-[4rem] xl:top-[2rem] z-40 cursor-grab"
         alt=""
       />
       <div className="w-full h-full absolute z-90 bottom-0 overflow-y-hidden">

@@ -22,7 +22,9 @@ export default function Home({role}) {
         <SidebarContainer />
         <PianoContainer />
         <HeroContainer />
-        <div  style={{background:"linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%"}}  className="absolute bg-white w-screen h-16 z-30 mt-[-4rem]" ></div> 
+        <div className="block relative w-full">
+        <div  style={{background:"linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255,255,255,0) 100%"}}  className="absolute bg-white w-screen h-16 z-30 mt-[-4rem] top-0  " ></div>
+        </div>
         <AboutMeContainer />
         <ContactContainer />
       </main>
