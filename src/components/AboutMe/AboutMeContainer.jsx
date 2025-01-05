@@ -40,7 +40,7 @@ export default function () {
           </p>
 
           <p>
-            I'm a tech nerd, gaming enthusiast, and book lover based in Peru,
+            I'm a tech nerd and gaming enthusiast based in Peru,
             <b> available worldwide</b>.
           </p>
         </motion.div>
