@@ -57,8 +57,8 @@ export default function Keyboard({counter}) {
   }
 
   return (
-    <div className="hidden lg:grid grid-rows-2 grid-cols-1 h-full relative">
-      <div className="flex flex-row row-start-1 grid-rows-2 col-start-1 row-span-2  w-full">
+    <div className="hidden lg:grid grid-rows-2 grid-cols-1 h-full relative overflow-hidden">
+      <div className="flex flex-row row-start-1 grid-rows-2 col-start-1 row-span-2 w-full ">
         {piano.keys.map((key, index) => {
           return (
             !key.accidental && ( // if key.accidental is false, then is a Natural Key
@@ -70,8 +70,8 @@ export default function Keyboard({counter}) {
           )
         })}
       </div>
-      <div className="row-1 row-start-1 col-start-1 w-full lg:ml-[3.9rem] xl:ml-[5.2rem] 2xl:ml-[7rem] ">
-        <div className="flex flex-row  h-full w-full ">
+      <div className="row-1 row-start-1 col-start-1 lg:ml-[3.9rem] xl:ml-[5.2rem] 2xl:ml-[7rem] mr-12 ">
+        <div className="flex flex-row  h-full">
           {piano.keys.map((key, index) => {
             let extra_spacing =
               key.note.includes("D#") || key.note.includes("A#")
