@@ -12,7 +12,7 @@ export default function ContactContainer() {
   })
 
   return (
-    <div className="h-screen" ref={contactContainer} id="contact">
+    <div className="h-screen mx-8 lg:mx-0 " ref={contactContainer} id="contact">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-items-center h-full ">
         <div className="self-end lg:self-center">
           <motion.h2
