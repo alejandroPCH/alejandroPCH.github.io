@@ -22,12 +22,12 @@ export default function () {
     },
   }
   return (
-    <div className="h-screen relative overflow-hidden" ref={aboutMeContainer} id="about-me" >
+    <div className="h-screen relative overflow-hidden my-32 lg:my-0" ref={aboutMeContainer} id="about-me" >
       <div className="grid grid-cols-1 lg:grid-cols-2 items-end lg:items-center justify-items-center h-full ">
         <Rocket isInView={isInView}/>
 
         <motion.div
-          className="space-y-9 items-center mx-4 md:mx-16 md:ml-16 text-xl lg:text-2xl"
+          className="space-y-9 items-center mx-8 md:mx-16 md:ml-16 text-xl lg:text-2xl mb-8"
           initial={{ x: "-50%", opacity: 0 }}
           transition={{ duration: 1 }}
           animate={isInView && { x: 0, opacity: 1 }}
