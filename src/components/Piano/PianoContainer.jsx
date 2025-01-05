@@ -21,7 +21,7 @@ export default function PianoContainer() {
 
   return (
     <motion.div
-      className="h-screen flex-col flex justify-center items-center w-full z-10 pt-28 pb-12 "
+      className="h-screen flex-col flex justify-center items-center w-full z-10 pt-28 pb-12 px-12 min-h-[42rem]"
       style={{
         background,
       }}
@@ -30,7 +30,7 @@ export default function PianoContainer() {
     >
       <Keyboard counter={counter} />
       <motion.div
-        className="mt-8 hidden lg:flex items-center justify-center space-x-24 w-full text-slate-100 "
+        className="mt-8 hidden lg:flex items-center justify-center space-x-24 w-full text-slate-100"
         initial={{ opacity: 0 }}
         animate={isInView && { opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
